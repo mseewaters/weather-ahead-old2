@@ -1,26 +1,70 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <img class="logo" src="./assets/logo-final-inverted.png" alt="logo" />
+          Empowering your outdoor plans.
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <HomePage msg="Empowering your outdoor plans with Weather Ahead!"/>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HomePage
   }
 }
 </script>
 
-<style>
+<style lang="css">
+
+@import './assets/variables.css';
+
+html, body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: var(--dkblue);
+  background: var(--dkblue);
+}
+
+main {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Complete for header on all pages, retains fixed height for all resizing */
+header {
+  background-color: var(--medblue2);
+  width: 100%;
+  height: var(--fixedheight);
+  color: var(--ltyellow);
+}
+ul {
+  padding: 2px 10px;
+  display: flex;
+}
+.nav-item {
+  display: inline-block;
+  padding: 5px 40px 5px 5px;;
+  font-size: 1.5em;
+  border-right: 1px solid var(--ltblue);
+}
+.logo {
+  vertical-align: middle;
+  width: 50px;
+  margin-right: 20px;
 }
 </style>
