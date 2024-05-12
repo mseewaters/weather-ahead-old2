@@ -10,19 +10,12 @@
     </nav>
   </header>
   <main>
-    <HomePage msg="Empowering your outdoor plans with Weather Ahead!"/>
+    <router-view/>
   </main>
 </template>
 
-<script>
-import HomePage from './components/HomePage.vue'
+<script setup>
 
-export default {
-  name: 'App',
-  components: {
-    HomePage
-  }
-}
 </script>
 
 <style lang="css">

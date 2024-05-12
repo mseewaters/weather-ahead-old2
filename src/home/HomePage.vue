@@ -28,6 +28,10 @@
                 <p>Need to verify an account   <a href="/verify.html">Verify</a></p>
                 <br>
             </div>
+            <div id="nav">
+                <router-link to="/">Home</router-link> |
+                <router-link to="/register">Register</router-link>
+            </div>
             <div class="bottom-section" style="text-align: center;">
                 <img src="../assets/logo-final-inverted.png" alt="Logo" width=80% height=auto>
             </div>
@@ -36,13 +40,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HomePage',
-  props: {
-    msg: String
-  }
-}
+<script setup>
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
