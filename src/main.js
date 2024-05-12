@@ -1,13 +1,9 @@
-import { createApp } from 'vue'
-import { Amplify } from 'aws-amplify';
-import awsconfig from './aws-exports'; 
-Amplify.configure(awsconfig);
-
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 import router from './router';
 
+// Create and mount the Vue application
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
 
-
-createApp(App)
-    .use(router)
-    .mount('#app')
