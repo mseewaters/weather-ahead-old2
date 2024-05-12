@@ -18,9 +18,29 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { Auth } from 'aws-amplify';
+
+const email = ref('');
+const password = ref('');
+
+async function register() {
+    try {
+        await Auth.signUp({
+            username: email.value,
+            password: password.value,
+        });
+        alert('User successfully registered. Please login.');
+    } catch (error) {
+        alert(error.message);
+    }
+}
 
 </script>
 
 <style scoped>
 
+:input {   
+  margin-right: 10px; 
+}
 </style>

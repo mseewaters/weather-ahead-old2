@@ -1,7 +1,7 @@
 
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "@/home/HomePage.vue";
-import Register from "@/home/RegisterSection.vue";
+import RegisterSection from "@/home/RegisterSection.vue";
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -14,7 +14,7 @@ export default createRouter({
         {
             path:'/register',
             name: 'Register',
-            component: Register
+            component: RegisterSection
         }
     ]
 });
